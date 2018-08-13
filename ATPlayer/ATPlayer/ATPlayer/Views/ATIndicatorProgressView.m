@@ -25,10 +25,10 @@
     CGFloat lineWidth = CGRectGetHeight(self.bounds) - 2;
     CGContextSetLineWidth(context, lineWidth);
     CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
-    CGFloat dotLength = (CGRectGetWidth(self.bounds) - 17)/16.f;//最多16个白色方块
+    CGFloat dotLength = (CGRectGetWidth(self.bounds)-17)/16.f;//最多16个白色方块
     CGFloat lengths[] = {dotLength,1};//绘制dotLength个点，跳过1个点。依次循环
     //parse=0 phase参数表示在第一个虚线绘制的时候跳过多少个点  count=2，是lengthes数组的长度
-    CGContextSetLineDash(context, 0, lengths,2);
+    CGContextSetLineDash(context, 0, lengths, 2);
     //从x=1开始绘制
     CGContextMoveToPoint(context, 1, CGRectGetMidY(self.bounds));
     NSInteger dotCount = round(16*_progress);

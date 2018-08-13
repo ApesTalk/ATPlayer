@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "ATBrightnessIndicator.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "TestViewController.h"
 
 @interface ViewController ()
-@property (nonatomic, strong)MPVolumeView *volumeView;
+@property (nonatomic, strong) MPVolumeView *volumeView;
 @end
 
 @implementation ViewController
@@ -20,10 +21,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [ATBrightnessIndicator startMonitoring];
+//    self.navigationItem.leftBarButtonItem
+//    self.navigationItem.leftBarButtonItems
+//    self.navigationItem.rightBarButtonItem
+//    self.navigationItem.rightBarButtonItems
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    TestViewController *vc = [[TestViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    return;
+    
+    
     //修改屏幕亮度
     CGFloat brightness = [UIScreen mainScreen].brightness;
     brightness += 0.1;
