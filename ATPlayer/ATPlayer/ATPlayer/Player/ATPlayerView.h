@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ATPlayerView : UIView
-@property (nonatomic, strong) UIImageView *videoCoverView;///< 视频封面
+@property (nonatomic, strong) UIImageView *videoCoverView;///< 视频封面，暴露出来方便自行选择用哪个图片加载库
+@property (nonatomic, strong) UIButton *playBtn;
+@property (nonatomic, strong) UIView *topBar;
+@property (nonatomic, strong) UIView *bottomBar;
 
 - (void)playWithUrl:(NSURL *)url;
+
 @end
