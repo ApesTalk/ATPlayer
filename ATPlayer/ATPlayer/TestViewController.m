@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "ATPlayerView.h"
+#import "ATPlaySourceModel.h"
 
 @interface TestViewController ()
 @property (nonatomic, strong) ATPlayerView *playerView;
@@ -44,7 +45,11 @@
     _playerView = [[ATPlayerView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.width*9.0/16.0)];
     [self.view addSubview:_playerView];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"TINKbyMrKaplin" ofType:@"mp4"];
-    [_playerView playWithUrl:[NSURL fileURLWithPath:path]];
+    ATPlaySourceModel *model = [[ATPlaySourceModel alloc]init];
+    model.lineId = @"123456";
+    model.lineName = @"标准";
+    model.lineUrl = [NSURL fileURLWithPath:path];
+    [_playerView playWithModel:model];
 }
 
 @end

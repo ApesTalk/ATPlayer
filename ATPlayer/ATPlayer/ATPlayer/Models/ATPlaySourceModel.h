@@ -1,14 +1,15 @@
 //
-//  ATProtocols.h
+//  ATPlaySourceModel.h
 //  ATPlayer
 //
-//  Created by lumin on 2018/8/27.
+//  Created by lumin on 2018/8/29.
 //  Copyright © 2018年 https://github.com/ApesTalk. All rights reserved.
-//  播放数据源模型必须遵守的协议
+//
 
 #import <Foundation/Foundation.h>
+#import "ATProtocols.h"
 
-@protocol ATProtocols <NSObject>
+@interface ATPlaySourceModel : NSObject <ATProtocols>
 @property (nonatomic, copy) NSString *lineId;
 @property (nonatomic, copy) NSString *lineName;
 @property (nonatomic, strong) NSURL *lineUrl;

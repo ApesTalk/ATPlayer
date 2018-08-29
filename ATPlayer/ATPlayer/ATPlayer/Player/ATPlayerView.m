@@ -106,9 +106,9 @@ static NSString *kLoadedTimeRangesKey = @"loadedTimeRanges";
 //    [self nextClick];
 }
 
-- (void)playWithUrl:(NSURL *)url
+- (void)playWithModel:(id<ATProtocols>)model
 {
-    if(!url){
+    if(!model){
         return;
     }
     //release old
@@ -118,7 +118,10 @@ static NSString *kLoadedTimeRangesKey = @"loadedTimeRanges";
         [self removeNotification];
     }
     //create new
-    AVPlayerItem *item = [[AVPlayerItem alloc]initWithURL:url];
+    
+    BOOL isFileUrl = model.lineUrl.isFileURL;
+    
+    AVPlayerItem *item = [[AVPlayerItem alloc]initWithURL:model.lineUrl];
     AVPlayer *player = [[AVPlayer alloc]initWithPlayerItem:item];
     self.currentPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:player];
     self.currentPlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;//视频填充模式
