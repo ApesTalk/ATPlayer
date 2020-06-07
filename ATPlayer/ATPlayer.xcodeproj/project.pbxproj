@@ -15,9 +15,10 @@
 		6D300A78210366E30047D434 /* ATPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D300A77210366E30047D434 /* ATPlayerUITests.m */; };
 		6D300A8B2103678D0047D434 /* ATBrightnessIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D300A8A2103678D0047D434 /* ATBrightnessIndicator.m */; };
 		6D300A9421036B420047D434 /* ATIndicatorProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D300A9321036B420047D434 /* ATIndicatorProgressView.m */; };
+		6D863E29248D304800F50932 /* NSObject+SafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D863E28248D304800F50932 /* NSObject+SafeKVO.m */; };
 		6DB56A1A21202DC700E00D6A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB56A1921202DC700E00D6A /* TestViewController.m */; };
 		6DDC970521342B9000030544 /* TINKbyMrKaplin.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC970421342B9000030544 /* TINKbyMrKaplin.mp4 */; };
-		6DDC970A2136D7DE00030544 /* ATPlaySourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC97092136D7DE00030544 /* ATPlaySourceModel.m */; };
+		6DDC970A2136D7DE00030544 /* ATVideoSourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC97092136D7DE00030544 /* ATVideoSourceModel.m */; };
 		6DFA390B2116CAB70039C0BA /* ATPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DFA390A2116CAB70039C0BA /* ATPlayerView.m */; };
 /* End PBXBuildFile section */
 
@@ -57,12 +58,14 @@
 		6D300A8A2103678D0047D434 /* ATBrightnessIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATBrightnessIndicator.m; sourceTree = "<group>"; };
 		6D300A9221036B420047D434 /* ATIndicatorProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATIndicatorProgressView.h; sourceTree = "<group>"; };
 		6D300A9321036B420047D434 /* ATIndicatorProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATIndicatorProgressView.m; sourceTree = "<group>"; };
+		6D863E27248D304800F50932 /* NSObject+SafeKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+SafeKVO.h"; path = "ATPlayer/ATPlayer/Player/NSObject+SafeKVO.h"; sourceTree = SOURCE_ROOT; };
+		6D863E28248D304800F50932 /* NSObject+SafeKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SafeKVO.m"; path = "ATPlayer/ATPlayer/Player/NSObject+SafeKVO.m"; sourceTree = SOURCE_ROOT; };
 		6DB56A1821202DC700E00D6A /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		6DB56A1921202DC700E00D6A /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		6DDC970421342B9000030544 /* TINKbyMrKaplin.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TINKbyMrKaplin.mp4; sourceTree = "<group>"; };
-		6DDC970721343AB700030544 /* ATProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATProtocols.h; sourceTree = "<group>"; };
-		6DDC97082136D7DE00030544 /* ATPlaySourceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPlaySourceModel.h; sourceTree = "<group>"; };
-		6DDC97092136D7DE00030544 /* ATPlaySourceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATPlaySourceModel.m; sourceTree = "<group>"; };
+		6DDC970721343AB700030544 /* ATVideoSourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATVideoSourceProtocol.h; sourceTree = "<group>"; };
+		6DDC97082136D7DE00030544 /* ATVideoSourceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATVideoSourceModel.h; sourceTree = "<group>"; };
+		6DDC97092136D7DE00030544 /* ATVideoSourceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATVideoSourceModel.m; sourceTree = "<group>"; };
 		6DFA39092116CAB70039C0BA /* ATPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPlayerView.h; sourceTree = "<group>"; };
 		6DFA390A2116CAB70039C0BA /* ATPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +176,8 @@
 		6D300A87210367790047D434 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6D863E27248D304800F50932 /* NSObject+SafeKVO.h */,
+				6D863E28248D304800F50932 /* NSObject+SafeKVO.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -197,9 +202,9 @@
 		6DFA390C2116D21F0039C0BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6DDC970721343AB700030544 /* ATProtocols.h */,
-				6DDC97082136D7DE00030544 /* ATPlaySourceModel.h */,
-				6DDC97092136D7DE00030544 /* ATPlaySourceModel.m */,
+				6DDC970721343AB700030544 /* ATVideoSourceProtocol.h */,
+				6DDC97082136D7DE00030544 /* ATVideoSourceModel.h */,
+				6DDC97092136D7DE00030544 /* ATVideoSourceModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,9 +339,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DFA390B2116CAB70039C0BA /* ATPlayerView.m in Sources */,
+				6D863E29248D304800F50932 /* NSObject+SafeKVO.m in Sources */,
 				6D300A58210366E10047D434 /* ViewController.m in Sources */,
 				6DB56A1A21202DC700E00D6A /* TestViewController.m in Sources */,
-				6DDC970A2136D7DE00030544 /* ATPlaySourceModel.m in Sources */,
+				6DDC970A2136D7DE00030544 /* ATVideoSourceModel.m in Sources */,
 				6D300A8B2103678D0047D434 /* ATBrightnessIndicator.m in Sources */,
 				6D300A63210366E20047D434 /* main.m in Sources */,
 				6D300A55210366E10047D434 /* AppDelegate.m in Sources */,

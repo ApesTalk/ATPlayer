@@ -8,9 +8,9 @@
 
 #import "TestViewController.h"
 #import "ATPlayerView.h"
-#import "ATPlaySourceModel.h"
+#import "ATVideoSourceModel.h"
 
-@interface TestViewController ()
+@interface TestViewController ()<ATPlayerViewDelegate>
 @property (nonatomic, strong) ATPlayerView *playerView;
 @end
 
@@ -43,13 +43,42 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     _playerView = [[ATPlayerView alloc]initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.width*9.0/16.0)];
+    _playerView.delegate = self;
     [self.view addSubview:_playerView];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"TINKbyMrKaplin" ofType:@"mp4"];
-    ATPlaySourceModel *model = [[ATPlaySourceModel alloc]init];
-    model.lineId = @"123456";
-    model.lineName = @"标准";
-    model.lineUrl = [NSURL fileURLWithPath:path];
+    ATVideoSourceModel *model = [[ATVideoSourceModel alloc]init];
+    model.sourceId = @"123456";
+    model.sourceName = @"标准";
+    model.sourceUrl = [NSURL fileURLWithPath:path];
     [_playerView playWithModel:model];
+}
+
+#pragma mark---ATPlayerViewDelegate
+- (void)readyToPlay:(ATPlayerView *)player
+{
+    [player seekToTime:5 compelete:^{
+        
+    }];
+}
+
+- (void)playFinished:(ATPlayerView *)player
+{
+    
+}
+
+- (void)player:(ATPlayerView *)player bufferTimeChanged:(double)currentTime totalTime:(double)totalTime
+{
+    
+}
+
+- (void)player:(ATPlayerView *)player timeChanged:(double)currentTime totalTime:(double)totalTime
+{
+    
+}
+
+- (void)player:(ATPlayerView *)player happendedError:(ATPlayerErrorType)type error:(NSError *)error
+{
+    
 }
 
 @end
