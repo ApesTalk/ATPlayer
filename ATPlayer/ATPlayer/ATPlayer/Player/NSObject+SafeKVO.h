@@ -2,7 +2,7 @@
 //  NSObject+SafeKVO.h
 //  ATPlayer
 //
-//  Created by lumin on 2020/6/7.
+//  Created by ApesTalk on 2020/6/7.
 //  Copyright © 2020 https://github.com/ApesTalk. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  TestViewController.m
 //  ATPlayer
 //
-//  Created by lumin on 2018/8/12.
+//  Created by ApesTalk on 2018/8/12.
 //  Copyright © 2018年 https://github.com/ApesTalk. All rights reserved.
 //
 

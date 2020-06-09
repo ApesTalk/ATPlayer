@@ -2,7 +2,7 @@
 //  ATIndicatorProgressView.m
 //  ATPlayer
 //
-//  Created by lumin on 2018/7/21.
+//  Created by ApesTalk on 2018/7/21.
 //  Copyright © 2018年 https://github.com/ApesTalk. All rights reserved.
 //
 

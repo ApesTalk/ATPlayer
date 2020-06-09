@@ -16,6 +16,10 @@
 		6D300A8B2103678D0047D434 /* ATBrightnessIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D300A8A2103678D0047D434 /* ATBrightnessIndicator.m */; };
 		6D300A9421036B420047D434 /* ATIndicatorProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D300A9321036B420047D434 /* ATIndicatorProgressView.m */; };
 		6D863E29248D304800F50932 /* NSObject+SafeKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D863E28248D304800F50932 /* NSObject+SafeKVO.m */; };
+		6DA561FA248F3424004730AD /* ATPortraitTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA561F9248F3424004730AD /* ATPortraitTopBar.m */; };
+		6DA561FD248F3437004730AD /* ATPortraitBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA561FC248F3437004730AD /* ATPortraitBottomBar.m */; };
+		6DA56200248F3448004730AD /* ATLandscapeTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA561FF248F3448004730AD /* ATLandscapeTopBar.m */; };
+		6DA56203248F3454004730AD /* ATLandscapeBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA56202248F3454004730AD /* ATLandscapeBottomBar.m */; };
 		6DB56A1A21202DC700E00D6A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB56A1921202DC700E00D6A /* TestViewController.m */; };
 		6DDC970521342B9000030544 /* TINKbyMrKaplin.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6DDC970421342B9000030544 /* TINKbyMrKaplin.mp4 */; };
 		6DDC970A2136D7DE00030544 /* ATVideoSourceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DDC97092136D7DE00030544 /* ATVideoSourceModel.m */; };
@@ -60,6 +64,14 @@
 		6D300A9321036B420047D434 /* ATIndicatorProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATIndicatorProgressView.m; sourceTree = "<group>"; };
 		6D863E27248D304800F50932 /* NSObject+SafeKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSObject+SafeKVO.h"; path = "ATPlayer/ATPlayer/Player/NSObject+SafeKVO.h"; sourceTree = SOURCE_ROOT; };
 		6D863E28248D304800F50932 /* NSObject+SafeKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SafeKVO.m"; path = "ATPlayer/ATPlayer/Player/NSObject+SafeKVO.m"; sourceTree = SOURCE_ROOT; };
+		6DA561F8248F3424004730AD /* ATPortraitTopBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPortraitTopBar.h; sourceTree = "<group>"; };
+		6DA561F9248F3424004730AD /* ATPortraitTopBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATPortraitTopBar.m; sourceTree = "<group>"; };
+		6DA561FB248F3437004730AD /* ATPortraitBottomBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATPortraitBottomBar.h; sourceTree = "<group>"; };
+		6DA561FC248F3437004730AD /* ATPortraitBottomBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATPortraitBottomBar.m; sourceTree = "<group>"; };
+		6DA561FE248F3448004730AD /* ATLandscapeTopBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLandscapeTopBar.h; sourceTree = "<group>"; };
+		6DA561FF248F3448004730AD /* ATLandscapeTopBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATLandscapeTopBar.m; sourceTree = "<group>"; };
+		6DA56201248F3454004730AD /* ATLandscapeBottomBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLandscapeBottomBar.h; sourceTree = "<group>"; };
+		6DA56202248F3454004730AD /* ATLandscapeBottomBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATLandscapeBottomBar.m; sourceTree = "<group>"; };
 		6DB56A1821202DC700E00D6A /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		6DB56A1921202DC700E00D6A /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		6DDC970421342B9000030544 /* TINKbyMrKaplin.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TINKbyMrKaplin.mp4; sourceTree = "<group>"; };
@@ -165,6 +177,7 @@
 		6D300A86210367790047D434 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6DA561F7248F33FC004730AD /* Bars */,
 				6D300A892103678D0047D434 /* ATBrightnessIndicator.h */,
 				6D300A8A2103678D0047D434 /* ATBrightnessIndicator.m */,
 				6D300A9221036B420047D434 /* ATIndicatorProgressView.h */,
@@ -189,6 +202,21 @@
 				6DFA390A2116CAB70039C0BA /* ATPlayerView.m */,
 			);
 			path = Player;
+			sourceTree = "<group>";
+		};
+		6DA561F7248F33FC004730AD /* Bars */ = {
+			isa = PBXGroup;
+			children = (
+				6DA561F8248F3424004730AD /* ATPortraitTopBar.h */,
+				6DA561F9248F3424004730AD /* ATPortraitTopBar.m */,
+				6DA561FB248F3437004730AD /* ATPortraitBottomBar.h */,
+				6DA561FC248F3437004730AD /* ATPortraitBottomBar.m */,
+				6DA561FE248F3448004730AD /* ATLandscapeTopBar.h */,
+				6DA561FF248F3448004730AD /* ATLandscapeTopBar.m */,
+				6DA56201248F3454004730AD /* ATLandscapeBottomBar.h */,
+				6DA56202248F3454004730AD /* ATLandscapeBottomBar.m */,
+			);
+			path = Bars;
 			sourceTree = "<group>";
 		};
 		6DDC970321342B9000030544 /* LocalVideos */ = {
@@ -344,9 +372,13 @@
 				6DB56A1A21202DC700E00D6A /* TestViewController.m in Sources */,
 				6DDC970A2136D7DE00030544 /* ATVideoSourceModel.m in Sources */,
 				6D300A8B2103678D0047D434 /* ATBrightnessIndicator.m in Sources */,
+				6DA56200248F3448004730AD /* ATLandscapeTopBar.m in Sources */,
+				6DA56203248F3454004730AD /* ATLandscapeBottomBar.m in Sources */,
 				6D300A63210366E20047D434 /* main.m in Sources */,
+				6DA561FA248F3424004730AD /* ATPortraitTopBar.m in Sources */,
 				6D300A55210366E10047D434 /* AppDelegate.m in Sources */,
 				6D300A9421036B420047D434 /* ATIndicatorProgressView.m in Sources */,
+				6DA561FD248F3437004730AD /* ATPortraitBottomBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

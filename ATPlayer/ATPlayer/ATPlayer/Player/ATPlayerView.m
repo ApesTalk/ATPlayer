@@ -2,7 +2,7 @@
 //  ATPlayerView.m
 //  ATPlayer
 //
-//  Created by lumin on 2018/8/5.
+//  Created by ApesTalk on 2018/8/5.
 //  Copyright © 2018年 https://github.com/ApesTalk. All rights reserved.
 //
 
@@ -214,7 +214,6 @@ static NSString *kATLoadedTimeRangesKey = @"loadedTimeRanges";
 {
     NSLog(@"视频播放完成");
     !_delegateResponse.playFinished ?: [_delegate playFinished:self];
-//    [self nextClick];
 }
 
 #pragma mark---UIGestureRecognizerDelegate
